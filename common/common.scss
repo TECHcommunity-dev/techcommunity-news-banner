@@ -1,0 +1,50 @@
+body{
+    // Style to display News banner on Topics under News category. [Added By: Saurabh, Date: 26/05/2021]
+    &:not(.category-news.archetype-regular){
+        #news-banner{
+            display:none;
+        }
+    }
+    #news-banner{
+        .news-banner-wrapper{
+            @include breakpoint("tablet") {
+              padding: 2em 0;
+            }
+            @include breakpoint("mobile-large") {
+              padding: 2em 0;
+            }
+            background: var(--tertiary);
+            padding: 3em 0;
+            text-align: center;
+            .news-banner-body{
+                .news-banner-title{
+                    @include breakpoint("tablet") {
+                      font-size: 2em;
+                    }
+                    @include breakpoint("mobile-large") {
+                      font-size: 1.5em;
+                    }
+                    font-size: 2.2em;
+                    color: var(--secondary);
+                    margin-bottom: 0.7em;
+                }
+                .news-banner-button {
+                    a{
+                        @include breakpoint("mobile-large") {
+                          margin: 0 1em;
+                        }
+                        font-weight: 600;
+                        color: var(--primary);
+                        background-color: var(--secondary);
+                        font-size: 1em;
+                        padding: 1em 1.8em;
+                    }
+                    a:hover{
+                        background-color: var(--primary);
+                        color: var(--secondary);;
+                    }
+                }    
+            }
+        }
+    }
+}
