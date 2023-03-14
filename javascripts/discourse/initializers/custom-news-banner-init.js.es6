@@ -6,6 +6,7 @@ export default {
   initialize() {
     withPluginApi("0.8", api => {
         api.modifyClass("controller:static", {
+          pluginId: 'techcommunity-static',
           @on("init")
           showNewsBannerOnStatic() {
             this.set("application.showFooter", true);
